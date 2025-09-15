@@ -4,7 +4,7 @@ The following code helps in communicating between Raspberry PI and Arduino. Thro
 
 ## 📽️ Demo Video
 
-👉 *[[Demo video link here](https://youtu.be/1uNaFuRHKQs)]*
+👉 *[[Demo video link here](https://youtu.be/1AZHrxAGies)]*
 
 ---
 
