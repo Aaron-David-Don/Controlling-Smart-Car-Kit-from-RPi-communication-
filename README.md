@@ -27,7 +27,7 @@ Through this setup, the Smart Car can be controlled remotely and efficiently, en
 ## 🧰 Technologies & Libraries
 
 - **Python 3**
-- **Arduino IDE ** (for writing motor control logic)
+- **Arduino IDE** (for writing motor control logic)
 
 ---
 
