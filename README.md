@@ -10,28 +10,24 @@ The following code helps in communicating between Raspberry PI and Arduino. Thro
 
 ## 📌 Project Overview
 
-This system provides a **contactless** and **intelligent** method to automate home lighting using **ultrasonic sensors** and a **relay module**. It counts the number of people in a room by detecting their direction of movement (entry or exit) and turns the light **on/off accordingly**.
+This system provides a wireless communication and intelligent control method for operating a Smart Car Kit using a Raspberry Pi and an Arduino. The Raspberry Pi acts as the central controller, sending commands to the Arduino, which directly manages the motors and sensors of the car.
 
-If at least one person is present, the light remains **ON**. Once everyone leaves, the light is **automatically turned OFF**.
+Through this setup, the Smart Car can be controlled remotely and efficiently, enabling flexible applications like navigation, obstacle avoidance, and autonomous driving experiments.
 
 ---
 
 ## ⚙️ Features
 
-- 🚶‍♂️ Entry/Exit detection with directional logic (A → B = Entry, B → A = Exit)
-- 💡 Automatic relay switching based on presence
-- 🧠 Smart reset to avoid stale triggers
-- 🔁 Continuous real-time monitoring
-- 🛑 Graceful termination with cleanup
+- 📡 Communication between Raspberry Pi and Arduino
+- 🎮 Remote smart car control using Raspberry Pi as the main hub
+- 🔄 Real-time command transmission with minimal delay
 
 ---
 
 ## 🧰 Technologies & Libraries
 
 - **Python 3**
-- **lgpio** (for GPIO handling on Raspberry Pi or compatible boards)
-- **Ultrasonic sensors** for proximity/distance measurement
-- **Relay module** to control the appliance (e.g., light)
+- **Arduino IDE ** (for writing motor control logic)
 
 ---
 
@@ -40,20 +36,16 @@ If at least one person is present, the light remains **ON**. Once everyone leave
 | Component                    | Quantity |
 |-----------------------------|----------|
 | Raspberry Pi                | 1        |
-| HC-SR04 Ultrasonic Sensor   | 2        |
-| 5V Relay Module             | 1        |
-| Resistors, Wires            | As needed |
-| Breadboard                  | 1        |
+| Arduino Car Kit             | 1        |
+
 
 ---
 
 ## 🧪 Working Principle
 
-1. Two ultrasonic sensors (`Sensor A` and `Sensor B`) detect motion near the door.
-2. When Sensor A is triggered **before** Sensor B within a short time, it detects an **entry**.
-3. When Sensor B is triggered **before** Sensor A, it detects an **exit**.
-4. The `person_count` is updated accordingly.
-5. The **relay turns ON** if at least one person is present; **turns OFF** otherwise.
+1. The Raspberry Pi sends directional commands (forward, backward, left, right, stop) to the Arduino
+2. The Arduino receives these commands and translates them into motor control signals using a motor driver.
+3. The Smart Car responds in real time, moving according to the received instructions.
 
 ---
 
